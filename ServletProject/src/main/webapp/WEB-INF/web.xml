@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  
+  <!--  
+  <servlet>
+  <servlet-name>first</servlet-name>
+  <servlet-class>com.web.FirstServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>first</servlet-name>
+  <url-pattern>/MyFirst</url-pattern>
+  </servlet-mapping>
+  -->
+  
+  <!--Servlet Context-->
+  <context-param>
+  <param-name>user</param-name>
+  <param-value>root</param-value>
+  </context-param>
+  <context-param>
+  <param-name>pass</param-name>
+  <param-value>2326@Repala</param-value>
+  </context-param>
+  
+  
+  <!-- Servlet Config -->
+  <servlet>
+  <servlet-name>login</servlet-name>
+<servlet-class>LoginServlet</servlet-class>
+<init-param>
+<param-name>url</param-name>
+<param-value>jdbc:mysql://localhost:3306/demo</param-value>
+</init-param>
+  </servlet>
+  
+  
+  <display-name>ServletProject</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+</web-app>
